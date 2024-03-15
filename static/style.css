@@ -1,0 +1,60 @@
+/* style.css */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Utilisation d'une police de caractères amusante */
+}
+
+.header {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 36px; /* Augmentation de la taille de la police */
+    font-weight: bold;
+    background: linear-gradient(to right, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff, #8000ff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.url {
+    margin-top: 20px;
+    font-size: 24px; /* Augmentation de la taille de la police */
+    color: cyan;
+}
+
+button {
+    background-color: #FF9900;
+    color: black;
+    border: none;
+    padding: 15px 30px; /* Augmentation de la taille du bouton */
+    font-size: 20px; /* Augmentation de la taille de la police */
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    border-radius: 20px; /* Ajout de coins arrondis au bouton */
+    text-transform: uppercase; /* Conversion du texte en majuscules */
+    font-weight: bold;
+    font-family: 'Arial Black', Gadget, sans-serif; /* Utilisation d'une police de caractères grasse */
+}
+
+button:hover {
+    background-color: #FFCC00;
+    transform: scale(1.05); /* Augmentation de la taille du bouton au survol */
+}
+
+@keyframes rainbow {
+    0% { color: red; }
+    10% { color: orange; }
+    20% { color: yellow; }
+    30% { color: green; }
+    40% { color: blue; }
+    50% { color: indigo; }
+    60% { color: violet; }
+    70% { color: red; }
+    80% { color: orange; }
+    90% { color: yellow; }
+    100% { color: green; }
+}
+
+.header {
+    animation: rainbow 5s infinite; /* Animation de l'entête avec les couleurs de l'arc-en-ciel */
+}

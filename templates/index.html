@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trhacknon - ChatGPT NextJS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header">Trhacknon's Cookie</div>
+    <h1>ChatGPT NextJS ssrf to xss</h1>
+
+    <p>- Cookie of the day: ChatGPT NextJS</p>
+    <p>- Enjoy a cookie of the day from Trhacknon's Bakery</p>
+    <button onclick="getRandomLine()">Get a Random Line</button>
+    <p id="randomLine"></p>
+
+    <script>
+        function getRandomLine() {
+            fetch('/get_random_line', {method: 'POST'})
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('randomLine').innerHTML = data;
+            });
+        }
+    </script>
+</body>
+</html>
