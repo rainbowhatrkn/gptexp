@@ -7,7 +7,7 @@ app = Flask(__name__)
 colors = ["black", "red", "#0000FF", "#FF9900"]
 
 # Chemin vers le fichier shot.txt
-shot_file_path = "shot.txt"
+shot_file_path = "shos.txt"
 
 # Fonction pour lire une ligne aléatoire à partir du fichier shot.txt
 def get_random_shot():
@@ -15,7 +15,15 @@ def get_random_shot():
         lines = file.readlines()
         return random.choice(lines).strip()
 
+shot_file_pathh = "shot.txt"
+
+    # Fonction pour lire une ligne aléatoire à partir du fichier shot.txt
+def get_random_shott():
+        with open(shot_file_pathh, 'r') as file:
+            lines = file.readlines()
+            return random.choice(lines).strip()
 @app.route('/')
+    
 def index():
     # Choisir une couleur aléatoire pour chaque élément de style
     color1, color2, color3 = random.sample(colors, 3)
@@ -25,5 +33,11 @@ def index():
 def get_random_line():
         random_line = get_random_shot()
         return render_template('random_line.html', random_line=random_line)
+
+@app.route('/get_random_linee', methods=['POST'])
+def get_random_linee():
+            random_line = get_random_shott()
+            return render_template('random_line.html', random_line=random_line)
+    
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=False)
