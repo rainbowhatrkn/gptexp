@@ -8,13 +8,23 @@
 </head>
 <body>
     <div class="header">Trhacknon's Cookie</div>
-    <h1>ChatGPT NextJS ssrf to xss</h1>
+    <h1 class="title">ChatGPT NextJS SSRF to XSS</h1>
 
-    <p>- Cookie of the day: ChatGPT NextJS</p>
-    <p>- Enjoy a cookie of the day from Trhacknon's Bakery</p>
-    <p><h1>SSRF</h1><button onclick="getRandomLine()">Get a Random Line</button></p>
-    <p><h1>XSS via SSRF</h1><button onclick="getRandomLinee()">Get a Random Line</button></p>
-    <p id="randomLine"></p>
+    <p class="description">- Cookie of the day: ChatGPT NextJS</p>
+    <p class="description">- Enjoy a cookie of the day from Trhacknon's Bakery</p>
+
+    <div class="action-buttons">
+        <div class="action-button">
+            <h2>SSRF</h2>
+            <button onclick="getRandomLine()" class="button button-ssrf">Get a Random Line</button>
+        </div>
+        <div class="action-button">
+            <h2>XSS via SSRF</h2>
+            <button onclick="getRandomLinee()" class="button button-xss">Get a Random Line</button>
+        </div>
+    </div>
+
+    <p id="randomLine" class="random-line"></p>
 
     <script>
         function getRandomLine() {

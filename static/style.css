@@ -1,44 +1,112 @@
 /* style.css */
+
+/* Fond et couleur du texte */
 body {
-    background-color: black;
-    color: white;
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Utilisation d'une police de caractères amusante */
+    background-color: #121212; /* Couleur de fond sombre */
+    color: #fff;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Police de caractères amusante */
 }
 
-.header {
+/* En-tête */
+    .header {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 36px; /* Augmentation de la taille de la police */
+        font-weight: bold;
+        background: linear-gradient(to right, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff, #8000ff, #ff00ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: rainbow 5s infinite; /* Animation de l'entête avec les couleurs de l'arc-en-ciel */
+}
+
+/* Titre */
+.title {
     text-align: center;
-    margin-top: 20px;
-    font-size: 36px; /* Augmentation de la taille de la police */
-    font-weight: bold;
-    background: linear-gradient(to right, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff, #8000ff, #ff00ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 36px;
+    margin-top: 30px;
+    animation: pulse 2s infinite; /* Animation de pulsation */
+}
+
+/* Description */
+.description {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Boutons d'action */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.action-button {
+    text-align: center;
+    margin: 0 20px;
+}
+
+/* Bouton SSRF */
+.button.button-ssrf {
+    background-color: #ff4b4b; /* Rouge vif */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+    animation: bounce 2s infinite; /* Animation de rebond */
+}
+
+.button.button-ssrf:hover {
+    background-color: #ff3333; /* Rouge vif plus foncé au survol */
+}
+
+/* Bouton XSS */
+.button.button-xss {
+    background-color: #32a852; /* Vert vif */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+    animation: shake 2s infinite; /* Animation de secousse */
+}
+
+.button.button-xss:hover {
+    background-color: #2b994a; /* Vert vif plus foncé au survol */
+}
+
+.button.button-random {
+    background-color: #ff00ff; /* Vert vif */
+    color: #000000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+    animation: shake 2s infinite; /* Animation de secousse */
+}
+
+.button.button-random:hover {
+    background-color: #00ff00; /* Vert vif plus foncé au survol */
+}
+
+/* Ligne aléatoire */
+.random-line {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 24px;
 }
 
 .url {
     margin-top: 20px;
     font-size: 24px; /* Augmentation de la taille de la police */
     color: cyan;
-}
-
-button {
-    background-color: #FF9900;
-    color: black;
-    border: none;
-    padding: 15px 30px; /* Augmentation de la taille du bouton */
-    font-size: 20px; /* Augmentation de la taille de la police */
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s;
-    border-radius: 20px; /* Ajout de coins arrondis au bouton */
-    text-transform: uppercase; /* Conversion du texte en majuscules */
-    font-weight: bold;
-    font-family: 'Arial Black', Gadget, sans-serif; /* Utilisation d'une police de caractères grasse */
-}
-
-button:hover {
-    background-color: #FFCC00;
-    transform: scale(1.05); /* Augmentation de la taille du bouton au survol */
 }
 
 @keyframes rainbow {
@@ -58,3 +126,6 @@ button:hover {
 .header {
     animation: rainbow 5s infinite; /* Animation de l'entête avec les couleurs de l'arc-en-ciel */
 }
+
+/* Animation de l'entête avec les couleurs de l'arc-en-ciel */
+@key

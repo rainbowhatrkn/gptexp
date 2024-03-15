@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Random URL</h1>
+    <h1 class="title">Random URL</h1>
     <div class="url">{{ random_line }}</div>
-    <button onclick="window.open('{{ random_line }}')">Open URL</button>
-
+    <button onclick="window.open('{{ random_line }}')" class="button button-random">Open URL</button>
 </body>
 </html>
